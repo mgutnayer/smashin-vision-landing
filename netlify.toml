@@ -1,0 +1,32 @@
+# Netlify configuration for smashin.vision
+# Static site: index.html lives at the repository root and is served directly.
+# Pinning the publish directory here overrides any conflicting UI setting that
+# was causing the landing page not to appear at the domain.
+
+[build]
+  # Serve the repository root, where index.html lives.
+  publish = "."
+  # No build step — this is hand-authored static HTML.
+  command = ""
+
+# ----------------------------------------------------------------------------
+# Security headers (applied to every response)
+# ----------------------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Force HTTPS for two years, including subdomains, and allow preloading.
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    # Disallow the site being framed (clickjacking protection).
+    X-Frame-Options = "DENY"
+    # Stop browsers from MIME-sniffing responses away from the declared type.
+    X-Content-Type-Options = "nosniff"
+    # Only send the origin as the referrer to other sites.
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # Turn off powerful browser features this page does not use.
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=(), usb=()"
+    # Content Security Policy scoped to the exact external sources this page loads.
+    # 'unsafe-inline'/'unsafe-eval' are required by the inline scripts and the
+    # Tailwind CDN runtime; the host allowlists still restrict where scripts,
+    # styles, fonts and network requests may originate.
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
