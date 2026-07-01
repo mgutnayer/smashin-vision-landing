@@ -434,8 +434,9 @@
                When deployed to Netlify, Netlify will automatically detect the data-netlify="true"
                attribute, parse the form fields, and handle all submissions serverlessly.
                No backend code is needed. Submissions appear in the Netlify dashboard under Forms. -->
-          <form data-id="35" id="hero-form-c3d4" name="waitlist" method="POST" data-netlify="true" class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto mb-4">
+          <form data-id="35" id="hero-form-c3d4" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto mb-4">
             <input data-id="36" type="hidden" name="form-name" value="waitlist" />
+            <p style="display:none"><label>Don't fill this: <input name="bot-field" /></label></p>
             <input data-id="37" type="email" name="email" required placeholder="your@email.com"
               class="flex-1 px-5 py-3.5 rounded-lg text-base font-medium transition-all duration-200"
               style="background: rgba(13, 17, 23, 0.8); border: 1px solid var(--border-card); color: var(--text-primary);" />
@@ -731,8 +732,9 @@
 
               <!-- Netlify Forms: Same form as hero — both submit to the same "waitlist" form in Netlify.
                    When deployed to Netlify, submissions from both forms appear in a single "waitlist" inbox. -->
-              <form data-id="205" id="cta-form-e5f6" name="waitlist" method="POST" data-netlify="true" class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto mb-4">
+              <form data-id="205" id="cta-form-e5f6" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto mb-4">
                 <input data-id="206" type="hidden" name="form-name" value="waitlist" />
+                <p style="display:none"><label>Don't fill this: <input name="bot-field" /></label></p>
                 <input data-id="207" type="email" name="email" required placeholder="your@email.com"
                   class="flex-1 px-5 py-4 rounded-lg text-base font-medium transition-all duration-200"
                   style="background: rgba(6, 6, 16, 0.6); border: 1px solid var(--border-card); color: var(--text-primary);" />
