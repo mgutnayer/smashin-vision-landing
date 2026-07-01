@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>smashin.vision | Trade. Build. Teach. Scale.</title>
+    <meta name="description" content="One independent crypto trader building a fintech empire in public. Trading tools, newsletter, YouTube, SaaS, and more — launching soon." />
+    <meta property="og:title" content="smashin.vision | Trade. Build. Teach. Scale." />
+    <meta property="og:description" content="One independent crypto trader building a fintech empire in public. Trading tools, newsletter, YouTube, SaaS, and more — launching soon." />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23060610'/%3E%3Cpolygon points='18,3 8,17 15,17 14,29 24,15 17,15' fill='%2300d4ff'/%3E%3C/svg%3E" />
+    <link rel="alternate icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23060610'/%3E%3Cpolygon points='18,3 8,17 15,17 14,29 24,15 17,15' fill='%2300d4ff'/%3E%3C/svg%3E" />
+    <link rel="canonical" href="https://smashin.vision/" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:url" content="https://smashin.vision/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="smashin.vision" />
+    <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%23060610'/%3E%3Ctext x='600' y='280' font-family='monospace' font-size='120' font-weight='bold' fill='%2300d4ff' text-anchor='middle'%3ESMASHIN%3C/text%3E%3Ctext x='600' y='400' font-family='monospace' font-size='120' font-weight='bold' fill='%23f0f4ff' text-anchor='middle'%3E.VISION%3C/text%3E%3Ctext x='600' y='480' font-family='monospace' font-size='32' fill='%238892a4' text-anchor='middle'%3ETrade. Build. Teach. Scale.%3C/text%3E%3C/svg%3E" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@smashinvision" />
+    <meta name="twitter:creator" content="@smashinvision" />
+    <meta name="twitter:title" content="smashin.vision | Trade. Build. Teach. Scale." />
+    <meta name="twitter:description" content="One independent crypto trader building a fintech empire in public. Trading tools, newsletter, YouTube, SaaS, and more — launching soon." />
+    <meta name="twitter:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%23060610'/%3E%3Ctext x='600' y='280' font-family='monospace' font-size='120' font-weight='bold' fill='%2300d4ff' text-anchor='middle'%3ESMASHIN%3C/text%3E%3Ctext x='600' y='400' font-family='monospace' font-size='120' font-weight='bold' fill='%23f0f4ff' text-anchor='middle'%3E.VISION%3C/text%3E%3Ctext x='600' y='480' font-family='monospace' font-size='32' fill='%238892a4' text-anchor='middle'%3ETrade. Build. Teach. Scale.%3C/text%3E%3C/svg%3E" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              base: '#060610',
+              'base-light': '#0d1117',
+              'base-border': '#1a2235',
+              cyan: '#00d4ff',
+              'cyan-dark': '#00a8cc',
+              purple: '#7c3aed',
+              'purple-dark': '#6320c7',
+              gold: '#f59e0b',
+              'text-primary': '#f0f4ff',
+              'text-muted': '#8892a4',
+            },
+            fontFamily: {
+              mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+              sans: ['"Inter"', 'system-ui', '-apple-system', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg-base: #060610;
+        --bg-card: #0d1117;
+        --border-card: #1a2235;
+        --cyan: #00d4ff;
+        --purple: #7c3aed;
+        --gold: #f59e0b;
+        --text-primary: #f0f4ff;
+        --text-muted: #8892a4;
+      }
+
+      * { box-sizing: border-box; }
+
+      html {
+        scroll-behavior: smooth;
+        scrollbar-width: thin;
+        scrollbar-color: #1a2235 #060610;
+      }
+
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #060610; }
+      ::-webkit-scrollbar-thumb { background: #1a2235; border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: #2a3550; }
+
+      body {
+        margin: 0;
+        background: var(--bg-base);
+        color: var(--text-primary);
+        font-family: 'Inter', system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+
+      /* Particle canvas */
+      #particle-canvas {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      /* Glow button */
+      .glow-btn {
+        background: linear-gradient(135deg, var(--cyan), var(--purple));
+        border: none;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        transition: all 0.3s ease;
+      }
+      .glow-btn::before {
+        content: '';
+        position: absolute;
+        inset: -2px;
+        background: linear-gradient(135deg, var(--cyan), var(--purple));
+        border-radius: inherit;
+        z-index: -1;
+        filter: blur(12px);
+        opacity: 0.4;
+        transition: opacity 0.3s ease;
+      }
+      .glow-btn:hover::before { opacity: 0.7; }
+      .glow-btn:hover { transform: translateY(-1px); }
+
+      /* Outline button */
+      .glow-outline-btn {
+        background: transparent;
+        border: 1px solid var(--cyan);
+        color: var(--cyan);
+        cursor: pointer;
+        position: relative;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 15px rgba(0, 212, 255, 0.1), inset 0 0 15px rgba(0, 212, 255, 0.05);
+      }
+      .glow-outline-btn:hover {
+        background: rgba(0, 212, 255, 0.08);
+        box-shadow: 0 0 25px rgba(0, 212, 255, 0.2), inset 0 0 25px rgba(0, 212, 255, 0.08);
+      }
+
+      /* Stream cards */
+      .stream-card {
+        background: linear-gradient(145deg, #0d1117 0%, #0a0e18 100%);
+        border: 1px solid var(--border-card);
+        border-radius: 16px;
+        padding: 2rem;
+        position: relative;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow: hidden;
+      }
+      .stream-card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 16px;
+        padding: 1px;
+        background: linear-gradient(145deg, transparent 30%, rgba(0, 212, 255, 0.15));
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask-composite: xor;
+        -webkit-mask-composite: xor;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+      .stream-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 212, 255, 0.06);
+        border-color: rgba(0, 212, 255, 0.2);
+      }
+      .stream-card:hover::before { opacity: 1; }
+
+      /* Badges */
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 3px 10px;
+        border-radius: 9999px;
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      .badge-green { background: rgba(34, 197, 94, 0.15); color: #22c55e; border: 1px solid rgba(34, 197, 94, 0.25); }
+      .badge-cyan { background: rgba(0, 212, 255, 0.12); color: #00d4ff; border: 1px solid rgba(0, 212, 255, 0.2); }
+      .badge-purple { background: rgba(124, 58, 237, 0.15); color: #a78bfa; border: 1px solid rgba(124, 58, 237, 0.25); }
+      .badge-gold { background: rgba(245, 158, 11, 0.12); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.2); }
+
+      /* Section animations */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Flywheel */
+      .flywheel-container {
+        position: relative;
+        width: 380px;
+        height: 380px;
+        margin: 0 auto;
+      }
+      @media (max-width: 500px) {
+        .flywheel-container { width: 300px; height: 300px; }
+      }
+
+      .flywheel-ring {
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        border: 2px solid rgba(0, 212, 255, 0.15);
+      }
+
+      .flywheel-node {
+        position: absolute;
+        width: 72px;
+        height: 72px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: var(--bg-card);
+        border: 1px solid var(--border-card);
+        border-radius: 50%;
+        font-size: 0.6rem;
+        font-weight: 600;
+        text-align: center;
+        line-height: 1.15;
+        color: var(--text-primary);
+        z-index: 2;
+        transition: all 0.3s ease;
+      }
+      @media (max-width: 500px) {
+        .flywheel-node { width: 58px; height: 58px; font-size: 0.5rem; }
+      }
+      .flywheel-node:hover {
+        border-color: var(--cyan);
+        box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+      }
+      .flywheel-node span.emoji { font-size: 1.15rem; margin-bottom: 2px; }
+
+      .flywheel-center {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 2;
+      }
+
+      @keyframes rotate-ring {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      .flywheel-arrows {
+        position: absolute;
+        inset: 0;
+        animation: rotate-ring 30s linear infinite;
+      }
+
+      /* Commitment cards */
+      .commitment-card {
+        background: linear-gradient(145deg, rgba(13, 17, 23, 0.8), rgba(10, 14, 24, 0.6));
+        border: 1px solid var(--border-card);
+        border-radius: 12px;
+        padding: 1.75rem;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+      .commitment-card:hover {
+        border-color: rgba(0, 212, 255, 0.2);
+        transform: translateY(-3px);
+      }
+
+      /* CTA section glow */
+      .cta-section {
+        position: relative;
+        border: 1px solid rgba(0, 212, 255, 0.12);
+        border-radius: 24px;
+        overflow: hidden;
+      }
+      .cta-section::before {
+        content: '';
+        position: absolute;
+        inset: -1px;
+        background: linear-gradient(135deg, rgba(0, 212, 255, 0.08), transparent 50%, rgba(124, 58, 237, 0.06));
+        border-radius: 24px;
+        pointer-events: none;
+      }
+
+      /* Smooth pulse for hero badge */
+      @keyframes pulse-soft {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.7; }
+      }
+      .pulse-badge { animation: pulse-soft 2.5s ease-in-out infinite; }
+
+      /* Nav transition */
+      .nav-scrolled {
+        background: rgba(6, 6, 16, 0.85) !important;
+        backdrop-filter: blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
+        border-bottom: 1px solid rgba(26, 34, 53, 0.5) !important;
+      }
+
+      /* Form success state */
+      .form-success {
+        display: none;
+        text-align: center;
+        padding: 2rem;
+      }
+      .form-success.show {
+        display: block;
+      }
+
+      /* Input focus */
+      input[type="email"]:focus {
+        outline: none;
+        border-color: var(--cyan);
+        box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.15);
+      }
+
+      /* Mobile menu */
+      .mobile-menu {
+        transform: translateX(100%);
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .mobile-menu.open {
+        transform: translateX(0);
+      }
+    </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://smashin.vision/#website",
+      "url": "https://smashin.vision/",
+      "name": "smashin.vision",
+      "description": "One independent crypto trader building a fintech empire in public.",
+      "publisher": { "@id": "https://smashin.vision/#person" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://smashin.vision/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://smashin.vision/#person",
+      "name": "Marc",
+      "url": "https://smashin.vision/",
+      "sameAs": [
+        "https://twitter.com/smashinvision",
+        "https://youtube.com/@smashinvision",
+        "https://linkedin.com/in/marcgutnayer"
+      ],
+      "jobTitle": "Independent Crypto Trader & Fintech Builder",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "smashin.vision"
+      }
+    }
+  ]
+}
+</script>
+  </head>
+  <!-- Deploy to Netlify: drag this file into app.netlify.com/drop or connect via GitHub -->
+  <body data-id="0" class="bg-base min-h-screen">
+    <app-icon data-id="1" hidden data-icon="trending-up" data-palette="Dark"></app-icon>
+    <app-disclaimer data-id="2" intent="financial"></app-disclaimer>
+
+    <!-- ========== STICKY NAV ========== -->
+    <header data-id="3" id="navbar-r9kx" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" style="background: transparent; border-bottom: 1px solid transparent;">
+      <div data-id="4" class="max-w-7xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
+        <a data-id="5" href="#" class="font-mono font-bold text-lg md:text-xl tracking-tight" style="color: var(--cyan);">smashin.vision</a>
+        <nav data-id="6" class="hidden md:flex items-center gap-8">
+          <a data-id="7" href="#streams-section" class="text-sm text-text-muted hover:text-text-primary transition-colors duration-200">Streams</a>
+          <a data-id="8" href="#flywheel-section" class="text-sm text-text-muted hover:text-text-primary transition-colors duration-200">Flywheel</a>
+          <a data-id="9" href="#public-section" class="text-sm text-text-muted hover:text-text-primary transition-colors duration-200">Building in Public</a>
+          <button data-id="10" id="nav-cta-btn-x8m2" class="glow-outline-btn px-5 py-2 rounded-lg text-sm font-semibold">Join the Waitlist</button>
+        </nav>
+        <button data-id="11" id="mobile-menu-btn-v3n1" class="md:hidden p-2 text-text-primary">
+          <i data-id="12" data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div data-id="13" id="mobile-menu-q7z4" class="mobile-menu fixed inset-0 z-[60] flex flex-col" style="background: rgba(6,6,16,0.98);">
+      <div data-id="14" class="flex items-center justify-between px-5 h-16">
+        <span data-id="15" class="font-mono font-bold text-lg" style="color: var(--cyan);">smashin.vision</span>
+        <button data-id="16" id="mobile-menu-close-k2m9" class="p-2 text-text-primary">
+          <i data-id="17" data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+      <nav data-id="18" class="flex flex-col items-center justify-center flex-1 gap-8">
+        <a data-id="19" href="#streams-section" class="mobile-nav-link text-xl text-text-primary font-medium">Streams</a>
+        <a data-id="20" href="#flywheel-section" class="mobile-nav-link text-xl text-text-primary font-medium">Flywheel</a>
+        <a data-id="21" href="#public-section" class="mobile-nav-link text-xl text-text-primary font-medium">Building in Public</a>
+        <button data-id="22" id="mobile-cta-btn-p8r3" class="glow-btn px-8 py-3 rounded-lg text-base font-semibold mobile-nav-link">Join the Waitlist</button>
+      </nav>
+    </div>
+
+    <main data-id="23">
+      <!-- ========== HERO SECTION ========== -->
+      <section data-id="24" id="hero-section-a1b2" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <canvas data-id="25" id="particle-canvas"></canvas>
+        <div data-id="26" class="relative z-10 text-center px-5 max-w-4xl mx-auto py-24 md:py-0">
+          <!-- Badge -->
+          <div data-id="27" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-8 pulse-badge" style="background: rgba(0, 212, 255, 0.08); border: 1px solid rgba(0, 212, 255, 0.15);">
+            <span data-id="28">🔥</span>
+            <span data-id="29" class="text-xs font-medium" style="color: var(--cyan);">Building in Public — Join 0 Early Members</span>
+          </div>
+
+          <!-- Headline -->
+          <h1 data-id="30" class="font-mono font-extrabold tracking-tighter leading-none mb-6" style="font-size: clamp(3.5rem, 12vw, 8rem);">
+            SMASHIN<br data-id="31"><span data-id="32" style="color: var(--cyan);">.VISION</span>
+          </h1>
+
+          <!-- Subheadline -->
+          <p data-id="33" class="text-lg md:text-[22px] font-medium text-text-primary mb-4 max-w-2xl mx-auto leading-relaxed">
+            One independent trader. Six streams of fintech income. All of it documented live.
+          </p>
+
+          <!-- Body copy -->
+          <p data-id="34" class="text-sm md:text-base text-text-muted max-w-xl mx-auto mb-10 leading-relaxed">
+            From the trading desk to the SaaS dashboard to the YouTube channel — we're building a fintech empire from scratch, in real time, from Deerfield IL. No VC. No BS. Just strategy, code, and compounding.
+          </p>
+
+          <!-- Netlify Forms: This form uses Netlify's built-in form handling.
+               When deployed to Netlify, Netlify will automatically detect the data-netlify="true"
+               attribute, parse the form fields, and handle all submissions serverlessly.
+               No backend code is needed. Submissions appear in the Netlify dashboard under Forms. -->
+          <form data-id="35" id="hero-form-c3d4" name="waitlist" method="POST" data-netlify="true" class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto mb-4">
+            <input data-id="36" type="hidden" name="form-name" value="waitlist" />
+            <input data-id="37" type="email" name="email" required placeholder="your@email.com"
+              class="flex-1 px-5 py-3.5 rounded-lg text-base font-medium transition-all duration-200"
+              style="background: rgba(13, 17, 23, 0.8); border: 1px solid var(--border-card); color: var(--text-primary);" />
+            <button data-id="38" type="submit" class="glow-btn px-6 py-3.5 rounded-lg text-sm md:text-base font-semibold whitespace-nowrap">
+              Get Early Access →
+            </button>
+          </form>
+          <div data-id="39" id="hero-form-success-w8k2" class="form-success max-w-lg mx-auto">
+            <div data-id="40" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg" style="background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.25);">
+              <i data-id="41" data-lucide="check-circle" class="w-5 h-5" style="color: #22c55e;"></i>
+              <span data-id="42" class="text-sm font-medium" style="color: #22c55e;">You're on the list! Watch your inbox.</span>
+            </div>
+          </div>
+          <p data-id="43" class="text-xs text-text-muted opacity-70">No spam. Unsubscribe anytime. First access to the tools and strategies.</p>
+
+          <!-- Scroll indicator -->
+          <div data-id="44" class="mt-16 flex justify-center">
+            <div data-id="45" class="animate-bounce">
+              <i data-id="46" data-lucide="chevron-down" class="w-5 h-5 text-text-muted opacity-40"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== THE SIX STREAMS ========== -->
+      <section data-id="47" id="streams-section" class="py-20 md:py-32 px-5 md:px-8">
+        <div data-id="48" class="max-w-7xl mx-auto">
+          <div data-id="49" class="text-center mb-16 reveal">
+            <h2 data-id="50" class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">The Empire Architecture</h2>
+            <div data-id="51" class="w-16 h-0.5 mx-auto mb-6" style="background: var(--cyan);"></div>
+            <p data-id="52" class="text-text-muted text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+              Six interconnected revenue streams that reinforce each other. Every trade funds the next build. Every build grows the audience. Every audience member is a potential subscriber, student, or licensee.
+            </p>
+          </div>
+
+          <div data-id="53" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+            <!-- Card 1: Prop Trading -->
+            <div data-id="54" class="stream-card reveal">
+              <div data-id="55" class="flex items-start justify-between mb-5">
+                <span data-id="56" class="text-3xl">🏦</span>
+                <span data-id="57" class="badge badge-green">LIVE — Day 1</span>
+              </div>
+              <h3 data-id="58" class="text-lg font-bold text-text-primary mb-1">Prop Trading</h3>
+              <p data-id="59" class="text-xs font-semibold uppercase tracking-wider mb-3" style="color: var(--cyan);">The Engine</p>
+              <p data-id="60" class="text-sm text-text-muted leading-relaxed mb-5">
+                Trading our own capital across BTC/ETH spot, futures, and liquidity provision. The self-funding core. Every trade documented. Every result shared.
+              </p>
+              <div data-id="61" class="flex items-center gap-2 pt-4" style="border-top: 1px solid var(--border-card);">
+                <i data-id="62" data-lucide="target" class="w-3.5 h-3.5" style="color: var(--cyan);"></i>
+                <span data-id="63" class="text-xs font-medium text-text-muted">Target: 30–60% annual return</span>
+              </div>
+            </div>
+
+            <!-- Card 2: Newsletter -->
+            <div data-id="64" class="stream-card reveal">
+              <div data-id="65" class="flex items-start justify-between mb-5">
+                <span data-id="66" class="text-3xl">📰</span>
+                <span data-id="67" class="badge badge-cyan">LAUNCHING SOON</span>
+              </div>
+              <h3 data-id="68" class="text-lg font-bold text-text-primary mb-1">Newsletter & Content</h3>
+              <p data-id="69" class="text-xs font-semibold uppercase tracking-wider mb-3" style="color: var(--cyan);">The Voice</p>
+              <p data-id="70" class="text-sm text-text-muted leading-relaxed mb-5">
+                A weekly newsletter covering crypto strategy, market analysis, and building this business in real time. Honest. Data-driven. Not financial advice.
+              </p>
+              <div data-id="71" class="flex items-center gap-2 pt-4" style="border-top: 1px solid var(--border-card);">
+                <i data-id="72" data-lucide="mail" class="w-3.5 h-3.5" style="color: var(--cyan);"></i>
+                <span data-id="73" class="text-xs font-medium text-text-muted">Platform: Beehiiv | Goal: 10,000 subs</span>
+              </div>
+            </div>
+
+            <!-- Card 3: YouTube -->
+            <div data-id="74" class="stream-card reveal">
+              <div data-id="75" class="flex items-start justify-between mb-5">
+                <span data-id="76" class="text-3xl">🎥</span>
+                <span data-id="77" class="badge badge-cyan">LAUNCHING SOON</span>
+              </div>
+              <h3 data-id="78" class="text-lg font-bold text-text-primary mb-1">YouTube & Social</h3>
+              <p data-id="79" class="text-xs font-semibold uppercase tracking-wider mb-3" style="color: var(--cyan);">The Stage</p>
+              <p data-id="80" class="text-sm text-text-muted leading-relaxed mb-5">
+                Strategy walkthroughs, trade recaps, fintech builds — all on camera. The most transparent trading channel on the internet.
+              </p>
+              <div data-id="81" class="flex items-center gap-2 pt-4" style="border-top: 1px solid var(--border-card);">
+                <i data-id="82" data-lucide="play-circle" class="w-3.5 h-3.5" style="color: var(--cyan);"></i>
+                <span data-id="83" class="text-xs font-medium text-text-muted">Target: 1,000 subs by Month 6</span>
+              </div>
+            </div>
+
+            <!-- Card 4: SaaS -->
+            <div data-id="84" class="stream-card reveal">
+              <div data-id="85" class="flex items-start justify-between mb-5">
+                <span data-id="86" class="text-3xl">💻</span>
+                <span data-id="87" class="badge badge-purple">IN DEVELOPMENT</span>
+              </div>
+              <h3 data-id="88" class="text-lg font-bold text-text-primary mb-1">SaaS Trading Tools</h3>
+              <p data-id="89" class="text-xs font-semibold uppercase tracking-wider mb-3" style="color: var(--purple);">The Product</p>
+              <p data-id="90" class="text-sm text-text-muted leading-relaxed mb-5">
+                A beautiful trade journal, position sizer, and strategy tracker built by a trader, for traders. Subscription-based. Launching to this waitlist first.
+              </p>
+              <div data-id="91" class="flex items-center gap-2 pt-4" style="border-top: 1px solid var(--border-card);">
+                <i data-id="92" data-lucide="code" class="w-3.5 h-3.5" style="color: var(--purple);"></i>
+                <span data-id="93" class="text-xs font-medium text-text-muted">Price: ~$29/month | Target: 1,000 users</span>
+              </div>
+            </div>
+
+            <!-- Card 5: Algorithm Licensing -->
+            <div data-id="94" class="stream-card reveal">
+              <div data-id="95" class="flex items-start justify-between mb-5">
+                <span data-id="96" class="text-3xl">🤖</span>
+                <span data-id="97" class="badge badge-gold">YEAR 2</span>
+              </div>
+              <h3 data-id="98" class="text-lg font-bold text-text-primary mb-1">Algorithm Licensing</h3>
+              <p data-id="99" class="text-xs font-semibold uppercase tracking-wider mb-3" style="color: var(--gold);">The IP</p>
+              <p data-id="100" class="text-sm text-text-muted leading-relaxed mb-5">
+                Proven trading algorithms, Pine Script indicators, and Hummingbot strategies — licensed to serious traders who want an edge without building from scratch.
+              </p>
+              <div data-id="101" class="flex items-center gap-2 pt-4" style="border-top: 1px solid var(--border-card);">
+                <i data-id="102" data-lucide="key" class="w-3.5 h-3.5" style="color: var(--gold);"></i>
+                <span data-id="103" class="text-xs font-medium text-text-muted">Target: 100 licensees @ $49–$99/month</span>
+              </div>
+            </div>
+
+            <!-- Card 6: Coaching -->
+            <div data-id="104" class="stream-card reveal">
+              <div data-id="105" class="flex items-start justify-between mb-5">
+                <span data-id="106" class="text-3xl">🎓</span>
+                <span data-id="107" class="badge badge-gold">YEAR 2</span>
+              </div>
+              <h3 data-id="108" class="text-lg font-bold text-text-primary mb-1">Coaching & Education</h3>
+              <p data-id="109" class="text-xs font-semibold uppercase tracking-wider mb-3" style="color: var(--gold);">The Academy</p>
+              <p data-id="110" class="text-sm text-text-muted leading-relaxed mb-5">
+                Online courses, group cohorts, and 1-on-1 mentorship from someone who actually trades. No gurus. No false promises. Just what works.
+              </p>
+              <div data-id="111" class="flex items-center gap-2 pt-4" style="border-top: 1px solid var(--border-card);">
+                <i data-id="112" data-lucide="graduation-cap" class="w-3.5 h-3.5" style="color: var(--gold);"></i>
+                <span data-id="113" class="text-xs font-medium text-text-muted">Course: $497–$997 | Coaching: $1k–$2k/mo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== THE FLYWHEEL ========== -->
+      <section data-id="114" id="flywheel-section" class="py-20 md:py-32 px-5 md:px-8" style="background: linear-gradient(180deg, var(--bg-base) 0%, #080c1a 50%, var(--bg-base) 100%);">
+        <div data-id="115" class="max-w-5xl mx-auto">
+          <div data-id="116" class="text-center mb-16 reveal">
+            <h2 data-id="117" class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Why Six Streams?</h2>
+            <p data-id="118" class="text-text-muted text-base md:text-lg">Because they don't compete — they <span data-id="119" class="font-semibold" style="color: var(--cyan);">compound</span>.</p>
+          </div>
+
+          <div data-id="120" class="reveal">
+            <div data-id="121" class="flywheel-container">
+              <!-- Animated rotating arrows ring -->
+              <svg data-id="122" class="flywheel-arrows" viewBox="0 0 380 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle data-id="123" cx="190" cy="190" r="155" stroke="rgba(0,212,255,0.12)" stroke-width="1.5" stroke-dasharray="8 6" />
+                <!-- Arrow indicators along the ring -->
+                <polygon data-id="124" points="345,190 338,184 338,196" fill="rgba(0,212,255,0.4)" />
+                <polygon data-id="125" points="190,35 184,42 196,42" fill="rgba(0,212,255,0.4)" />
+                <polygon data-id="126" points="35,190 42,196 42,184" fill="rgba(0,212,255,0.4)" />
+                <polygon data-id="127" points="190,345 196,338 184,338" fill="rgba(0,212,255,0.4)" />
+              </svg>
+
+              <!-- Ring -->
+              <div data-id="128" class="flywheel-ring"></div>
+
+              <!-- Center text -->
+              <div data-id="129" class="flywheel-center">
+                <span data-id="130" class="font-mono font-bold text-sm md:text-base" style="color: var(--cyan);">smashin</span><br data-id="131">
+                <span data-id="132" class="font-mono font-bold text-sm md:text-base text-text-primary">.vision</span>
+              </div>
+
+              <!-- Nodes positioned around the circle -->
+              <!-- Top -->
+              <div data-id="133" class="flywheel-node" style="top: -36px; left: 50%; transform: translateX(-50%);">
+                <span data-id="134" class="emoji">🏦</span>
+                <span data-id="135">Trade</span>
+              </div>
+              <!-- Top-right -->
+              <div data-id="136" class="flywheel-node" style="top: 14%; right: -12px;">
+                <span data-id="137" class="emoji">📰</span>
+                <span data-id="138">Content</span>
+              </div>
+              <!-- Bottom-right -->
+              <div data-id="139" class="flywheel-node" style="bottom: 14%; right: -12px;">
+                <span data-id="140" class="emoji">🎥</span>
+                <span data-id="141">Audience</span>
+              </div>
+              <!-- Bottom -->
+              <div data-id="142" class="flywheel-node" style="bottom: -36px; left: 50%; transform: translateX(-50%);">
+                <span data-id="143" class="emoji">💻</span>
+                <span data-id="144">SaaS</span>
+              </div>
+              <!-- Bottom-left -->
+              <div data-id="145" class="flywheel-node" style="bottom: 14%; left: -12px;">
+                <span data-id="146" class="emoji">🤖</span>
+                <span data-id="147">Licensing</span>
+              </div>
+              <!-- Top-left -->
+              <div data-id="148" class="flywheel-node" style="top: 14%; left: -12px;">
+                <span data-id="149" class="emoji">🎓</span>
+                <span data-id="150">Coaching</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proof points -->
+          <div data-id="151" class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20 reveal">
+            <div data-id="152" class="text-center">
+              <div data-id="153" class="w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3" style="background: rgba(0, 212, 255, 0.1);">
+                <i data-id="154" data-lucide="users" class="w-5 h-5" style="color: var(--cyan);"></i>
+              </div>
+              <p data-id="155" class="text-sm font-semibold text-text-primary mb-1">One audience. All streams.</p>
+              <p data-id="156" class="text-xs text-text-muted">Every follower can become a subscriber, student, or licensee.</p>
+            </div>
+            <div data-id="157" class="text-center">
+              <div data-id="158" class="w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3" style="background: rgba(124, 58, 237, 0.1);">
+                <i data-id="159" data-lucide="repeat" class="w-5 h-5" style="color: var(--purple);"></i>
+              </div>
+              <p data-id="160" class="text-sm font-semibold text-text-primary mb-1">Each stream funds the next.</p>
+              <p data-id="161" class="text-xs text-text-muted">Trading profits build the SaaS. SaaS revenue funds content production.</p>
+            </div>
+            <div data-id="162" class="text-center">
+              <div data-id="163" class="w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3" style="background: rgba(245, 158, 11, 0.1);">
+                <i data-id="164" data-lucide="eye" class="w-5 h-5" style="color: var(--gold);"></i>
+              </div>
+              <p data-id="165" class="text-sm font-semibold text-text-primary mb-1">Documented every step of the way.</p>
+              <p data-id="166" class="text-xs text-text-muted">Full transparency builds trust — and trust converts.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== BUILDING IN PUBLIC ========== -->
+      <section data-id="167" id="public-section" class="py-20 md:py-32 px-5 md:px-8">
+        <div data-id="168" class="max-w-5xl mx-auto">
+          <div data-id="169" class="rounded-2xl p-8 md:p-14 reveal" style="background: linear-gradient(145deg, #0e1320, #0b0f1c); border: 1px solid var(--border-card);">
+            <div data-id="170" class="max-w-2xl">
+              <h2 data-id="171" class="text-3xl md:text-4xl font-bold mb-6">Nothing is hidden here.</h2>
+              <p data-id="172" class="text-text-muted text-sm md:text-base leading-relaxed mb-10">
+                Most fintech founders hide their losses, their struggles, their pivots. Not here. Every trade result, every product build, every subscriber count — shared weekly in the newsletter and on YouTube. The good, the bad, and the ugly. If you want to watch a real fintech business get built from zero, this is it.
+              </p>
+            </div>
+
+            <div data-id="173" class="grid grid-cols-1 md:grid-cols-3 gap-5">
+              <div data-id="174" class="commitment-card reveal">
+                <span data-id="175" class="text-3xl block mb-4">📊</span>
+                <h4 data-id="176" class="text-base font-bold text-text-primary mb-2">Weekly P&L Shared</h4>
+                <p data-id="177" class="text-xs text-text-muted leading-relaxed">Real trading results, published every week. No cherry-picking. No hiding the red days.</p>
+              </div>
+              <div data-id="178" class="commitment-card reveal">
+                <span data-id="179" class="text-3xl block mb-4">🛠️</span>
+                <h4 data-id="180" class="text-base font-bold text-text-primary mb-2">Build Logs</h4>
+                <p data-id="181" class="text-xs text-text-muted leading-relaxed">Product development documented in real time. Watch features go from idea to shipped.</p>
+              </div>
+              <div data-id="182" class="commitment-card reveal">
+                <span data-id="183" class="text-3xl block mb-4">📈</span>
+                <h4 data-id="184" class="text-base font-bold text-text-primary mb-2">Business Metrics</h4>
+                <p data-id="185" class="text-xs text-text-muted leading-relaxed">Revenue, subscribers, users — nothing hidden. Full transparency, always.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== CTA / WAITLIST SECTION ========== -->
+      <section data-id="186" id="cta-section" class="py-20 md:py-32 px-5 md:px-8">
+        <div data-id="187" class="max-w-3xl mx-auto">
+          <div data-id="188" class="cta-section p-8 md:p-14 reveal">
+            <div data-id="189" class="relative z-10 text-center">
+              <h2 data-id="190" class="text-3xl md:text-5xl font-bold mb-4">Be First.</h2>
+              <p data-id="191" class="text-text-muted text-sm md:text-base max-w-lg mx-auto mb-10 leading-relaxed">
+                Join the waitlist for early access to the trading tools, the newsletter, and exclusive content before public launch.
+              </p>
+
+              <!-- Benefits -->
+              <div data-id="192" class="flex flex-col items-start gap-3 max-w-md mx-auto mb-10">
+                <div data-id="193" class="flex items-center gap-3">
+                  <i data-id="194" data-lucide="check" class="w-4 h-4 flex-shrink-0" style="color: var(--cyan);"></i>
+                  <span data-id="195" class="text-sm text-text-primary text-left">First access to the TradeVault SaaS tool (beta, free)</span>
+                </div>
+                <div data-id="196" class="flex items-center gap-3">
+                  <i data-id="197" data-lucide="check" class="w-4 h-4 flex-shrink-0" style="color: var(--cyan);"></i>
+                  <span data-id="198" class="text-sm text-text-primary text-left">Weekly newsletter from launch day</span>
+                </div>
+                <div data-id="199" class="flex items-center gap-3">
+                  <i data-id="200" data-lucide="check" class="w-4 h-4 flex-shrink-0" style="color: var(--cyan);"></i>
+                  <span data-id="201" class="text-sm text-text-primary text-left">Founding member pricing (locked in forever)</span>
+                </div>
+                <div data-id="202" class="flex items-center gap-3">
+                  <i data-id="203" data-lucide="check" class="w-4 h-4 flex-shrink-0" style="color: var(--cyan);"></i>
+                  <span data-id="204" class="text-sm text-text-primary text-left">Direct access to the founder</span>
+                </div>
+              </div>
+
+              <!-- Netlify Forms: Same form as hero — both submit to the same "waitlist" form in Netlify.
+                   When deployed to Netlify, submissions from both forms appear in a single "waitlist" inbox. -->
+              <form data-id="205" id="cta-form-e5f6" name="waitlist" method="POST" data-netlify="true" class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto mb-4">
+                <input data-id="206" type="hidden" name="form-name" value="waitlist" />
+                <input data-id="207" type="email" name="email" required placeholder="your@email.com"
+                  class="flex-1 px-5 py-4 rounded-lg text-base font-medium transition-all duration-200"
+                  style="background: rgba(6, 6, 16, 0.6); border: 1px solid var(--border-card); color: var(--text-primary);" />
+                <button data-id="208" type="submit" class="glow-btn px-7 py-4 rounded-lg text-sm md:text-base font-semibold whitespace-nowrap">
+                  Claim Your Spot →
+                </button>
+              </form>
+              <div data-id="209" id="cta-form-success-j4p7" class="form-success max-w-lg mx-auto">
+                <div data-id="210" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg" style="background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.25);">
+                  <i data-id="211" data-lucide="check-circle" class="w-5 h-5" style="color: #22c55e;"></i>
+                  <span data-id="212" class="text-sm font-medium" style="color: #22c55e;">You're on the list! Watch your inbox.</span>
+                </div>
+              </div>
+              <p data-id="213" class="text-xs text-text-muted opacity-70 flex items-center justify-center gap-1.5">
+                <i data-id="214" data-lucide="shield" class="w-3 h-3"></i>
+                Join traders already on the list
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer data-id="215" id="footer-g7h8" class="border-t px-5 md:px-8 py-10" style="border-color: var(--border-card);">
+      <div data-id="216" class="max-w-7xl mx-auto">
+        <div data-id="217" class="flex flex-col md:flex-row items-center justify-between gap-6 mb-6">
+          <span data-id="218" class="font-mono text-sm" style="color: var(--cyan);">smashin.vision <span data-id="219" class="text-text-muted">© 2026</span></span>
+          <nav data-id="220" class="flex items-center gap-6">
+            <a data-id="221" href="#" class="text-xs text-text-muted hover:text-text-primary transition-colors">Newsletter</a>
+            <a data-id="222" href="#" class="text-xs text-text-muted hover:text-text-primary transition-colors">YouTube</a>
+            <a data-id="223" href="#" class="text-xs text-text-muted hover:text-text-primary transition-colors">Twitter</a>
+            <a data-id="224" href="#" class="text-xs text-text-muted hover:text-text-primary transition-colors">LinkedIn</a>
+          </nav>
+          <span data-id="225" class="text-xs text-text-muted">Built in Deerfield, IL 🏙️</span>
+        </div>
+        <div data-id="226" class="pt-6 text-center" style="border-top: 1px solid var(--border-card);">
+          <p data-id="227" class="text-[11px] text-text-muted opacity-60 max-w-2xl mx-auto leading-relaxed">
+            ⚠️ Nothing on this site is financial advice. This is educational content only. Trading crypto involves substantial risk of loss.
+          </p>
+          <p data-id="228" class="text-[11px] text-text-muted opacity-40 mt-3">Made by Copilot</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // ===== ICONS (progressive enhancement) =====
+      if (typeof lucide !== "undefined" && typeof lucide.createIcons === "function") {
+        lucide.createIcons();
+      }
+
+      // ===== PARTICLE NETWORK CANVAS =====
+      (function () {
+        const canvas = document.getElementById('particle-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        let width, height, particles, animId;
+        const isMobile = window.innerWidth < 768;
+        const PARTICLE_COUNT = isMobile ? 40 : 80;
+        const CONNECT_DIST = 150;
+        const DOT_COLOR = 'rgba(0, 212, 255, 0.12)';
+        const LINE_COLOR = 'rgba(0, 212, 255, 0.06)';
+
+        function resize() {
+          const section = canvas.parentElement;
+          width = canvas.width = section.offsetWidth;
+          height = canvas.height = section.offsetHeight;
+        }
+
+        function createParticles() {
+          particles = [];
+          for (let i = 0; i < PARTICLE_COUNT; i++) {
+            particles.push({
+              x: Math.random() * width,
+              y: Math.random() * height,
+              vx: (Math.random() - 0.5) * 0.3,
+              vy: (Math.random() - 0.5) * 0.3,
+              r: Math.random() * 1.5 + 0.5,
+            });
+          }
+        }
+
+        function draw() {
+          ctx.clearRect(0, 0, width, height);
+
+          // Draw lines
+          for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+              const dx = particles[i].x - particles[j].x;
+              const dy = particles[i].y - particles[j].y;
+              const dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < CONNECT_DIST) {
+                const opacity = 0.06 * (1 - dist / CONNECT_DIST);
+                ctx.strokeStyle = `rgba(0, 212, 255, ${opacity})`;
+                ctx.lineWidth = 0.5;
+                ctx.beginPath();
+                ctx.moveTo(particles[i].x, particles[i].y);
+                ctx.lineTo(particles[j].x, particles[j].y);
+                ctx.stroke();
+              }
+            }
+          }
+
+          // Draw dots
+          for (const p of particles) {
+            ctx.fillStyle = DOT_COLOR;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        }
+
+        function update() {
+          for (const p of particles) {
+            p.x += p.vx;
+            p.y += p.vy;
+            if (p.x < 0 || p.x > width) p.vx *= -1;
+            if (p.y < 0 || p.y > height) p.vy *= -1;
+          }
+        }
+
+        function loop() {
+          update();
+          draw();
+          animId = requestAnimationFrame(loop);
+        }
+
+        resize();
+        createParticles();
+        loop();
+
+        window.addEventListener('resize', function () {
+          resize();
+          createParticles();
+        });
+      })();
+
+      // ===== NAV SCROLL EFFECT =====
+      (function () {
+        const nav = document.getElementById('navbar-r9kx');
+        if (!nav) return;
+        let ticking = false;
+        window.addEventListener('scroll', function () {
+          if (!ticking) {
+            requestAnimationFrame(function () {
+              if (window.scrollY > 50) {
+                nav.classList.add('nav-scrolled');
+              } else {
+                nav.classList.remove('nav-scrolled');
+              }
+              ticking = false;
+            });
+            ticking = true;
+          }
+        });
+      })();
+
+      // ===== MOBILE MENU =====
+      (function () {
+        const menu = document.getElementById('mobile-menu-q7z4');
+        const openBtn = document.getElementById('mobile-menu-btn-v3n1');
+        const closeBtn = document.getElementById('mobile-menu-close-k2m9');
+        if (!menu || !openBtn || !closeBtn) return;
+
+        openBtn.addEventListener('click', function () {
+          menu.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        });
+
+        closeBtn.addEventListener('click', function () {
+          menu.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+
+        // Close on link click
+        menu.querySelectorAll('.mobile-nav-link').forEach(function (link) {
+          link.addEventListener('click', function () {
+            menu.classList.remove('open');
+            document.body.style.overflow = '';
+          });
+        });
+      })();
+
+      // ===== SMOOTH SCROLL TO CTA =====
+      (function () {
+        const navCta = document.getElementById('nav-cta-btn-x8m2');
+        const mobileCta = document.getElementById('mobile-cta-btn-p8r3');
+        const ctaSection = document.getElementById('cta-section');
+        if (!ctaSection) return;
+
+        function scrollToCta(e) {
+          e.preventDefault();
+          ctaSection.scrollIntoView({ behavior: 'smooth' });
+        }
+        if (navCta) navCta.addEventListener('click', scrollToCta);
+        if (mobileCta) mobileCta.addEventListener('click', scrollToCta);
+      })();
+
+      // ===== FORM HANDLING =====
+      (function () {
+        var heroForm = document.getElementById('hero-form-c3d4');
+        var heroSuccess = document.getElementById('hero-form-success-w8k2');
+        var ctaForm = document.getElementById('cta-form-e5f6');
+        var ctaSuccess = document.getElementById('cta-form-success-j4p7');
+
+        function handleSubmit(form, successEl) {
+          if (!form || !successEl) return;
+          form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var email = form.querySelector('input[type="email"]');
+            if (!email || !email.value) return;
+
+            // In production on Netlify, the form submits normally.
+            // This JS handling provides a nice UX for the preview.
+            form.style.display = 'none';
+            successEl.classList.add('show');
+
+            // Also attempt the actual Netlify submission via fetch (will work on Netlify, gracefully fail otherwise)
+            var formData = new FormData(form);
+            fetch('/', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: new URLSearchParams(formData).toString(),
+            }).catch(function () {
+              // Silently ignore — expected to fail outside Netlify
+            });
+          });
+        }
+
+        handleSubmit(heroForm, heroSuccess);
+        handleSubmit(ctaForm, ctaSuccess);
+      })();
+
+      // ===== INTERSECTION OBSERVER (reveal animations) =====
+      (function () {
+        var reveals = document.querySelectorAll('.reveal');
+        if (!reveals.length) return;
+
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        reveals.forEach(function (el) {
+          observer.observe(el);
+        });
+      })();
+    </script>
+  </body>
+</html>
